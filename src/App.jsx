@@ -68,7 +68,7 @@ function App() {
   if (loading) return <LoadingScreen />
 
   return (
-    <div className="relative bg-void min-h-screen font-body">
+    <div className="relative bg-void min-h-screen font-body overflow-x-hidden">
       {/* Custom cursor */}
       <div ref={cursorDot} className="cursor-dot hidden md:block" />
       <div ref={cursorRing} className="cursor-ring hidden md:block" />
@@ -77,7 +77,7 @@ function App() {
       <div className="fixed inset-0 mesh-bg grid-pattern pointer-events-none z-0" />
 
       {/* Content */}
-      <div className="relative z-10">
+      <div className="relative z-10 overflow-x-hidden w-full">
         <Navbar />
         <Hero />
         <About />
